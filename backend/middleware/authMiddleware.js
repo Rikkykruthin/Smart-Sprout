@@ -29,7 +29,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
 // Middleware to allow admin-only access
 const admin = (req, res, next) => {
-    if (req.user && req.user.isAdmin) {
+    if (req.user && (req.user.role === 'admin' || req.user.isAdmin)) {
         next();
     } else {
         res.status(403);

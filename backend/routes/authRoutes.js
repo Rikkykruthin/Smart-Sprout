@@ -4,7 +4,7 @@ const {
     login,
     getUserProfile,
 } = require('../controllers/authController');
-const { isAuthenticatedUser } = require('../middleware/authMiddleware');
+const { protect } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
@@ -15,6 +15,6 @@ router.post('/register', register);
 router.post('/login', login);
 
 // Get Logged-in User Profile
-router.get('/me', isAuthenticatedUser, getUserProfile);
+router.get('/me', protect, getUserProfile);
 
 module.exports = router;

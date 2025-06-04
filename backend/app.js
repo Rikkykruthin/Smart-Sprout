@@ -10,6 +10,7 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const chatbotRoutes = require('./routes/chatbotRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -30,6 +31,7 @@ app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/users', userRoutes); // User routes
 app.use('/api/products', productRoutes); // Product routes
 app.use('/api/orders', orderRoutes); // Order routes
+app.use('/api/chatbot', chatbotRoutes); // Chatbot routes
 
 // Health Check Endpoint
 app.get('/', (req, res) => {

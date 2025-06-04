@@ -53,10 +53,10 @@ const ContactPage = () => {
                             <p>+1 234 567 890</p>
                         </div>
                         <div className="social-links text-center">
-                            <a href="#"><i className="bi bi-facebook"></i></a>
-                            <a href="#"><i className="bi bi-twitter"></i></a>
-                            <a href="#"><i className="bi bi-instagram"></i></a>
-                            <a href="#"><i className="bi bi-linkedin"></i></a>
+                            <a href="https://facebook.com/smartsprout"><i className="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com/smartsprout"><i className="bi bi-twitter"></i></a>
+                            <a href="https://instagram.com/smartsprout"><i className="bi bi-instagram"></i></a>
+                            <a href="https://linkedin.com/company/smartsprout"><i className="bi bi-linkedin"></i></a>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@ const ContactPage = () => {
             {/* Footer */}
             <footer>
                 <p>
-                    &copy; 2024 Smart Sprout. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    &copy; 2024 Smart Sprout. All Rights Reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
                 </p>
             </footer>
         </>

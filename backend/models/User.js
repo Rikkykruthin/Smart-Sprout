@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
 const userSchema = new mongoose.Schema(
     {
@@ -35,6 +36,14 @@ const userSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
+// Virtual field for isAdmin compatibility
+userSchema.virtual('isAdmin').get(function() {
+    return this.role === 'admin';
+});
+
+// Ensure virtual fields are serialized
+userSchema.set('toJSON', { virtuals: true });
+
 // Hash the password before saving
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
@@ -47,6 +56,11 @@ userSchema.pre('save', async function (next) {
 
 // Compare user-entered password with the hashed password in the database
 userSchema.methods.comparePassword = async function (enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password);
+};
+
+// Alias for compatibility with userController
+userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
 

@@ -39,7 +39,7 @@ const HomePage = () => {
                         alt="Slide 1"
                     />
                     <Carousel.Caption>
-                        <h3>“Agriculture is the foundation of civilization.”</h3>
+                        <h3>"Agriculture is the foundation of civilization."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -49,7 +49,7 @@ const HomePage = () => {
                         alt="Slide 2"
                     />
                     <Carousel.Caption>
-                        <h3>“Sustainable farming is the key to the future.”</h3>
+                        <h3>"Sustainable farming is the key to the future."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -59,7 +59,7 @@ const HomePage = () => {
                         alt="Slide 3"
                     />
                     <Carousel.Caption>
-                        <h3>“Farmers are the backbone of the world.”</h3>
+                        <h3>"Farmers are the backbone of the world."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -69,7 +69,7 @@ const HomePage = () => {
                         alt="Slide 4"
                     />
                     <Carousel.Caption>
-                        <h3>“A green revolution for a better tomorrow.”</h3>
+                        <h3>"A green revolution for a better tomorrow."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -79,7 +79,7 @@ const HomePage = () => {
                         alt="Slide 5"
                     />
                     <Carousel.Caption>
-                        <h3>“Healthy soil, healthy planet.”</h3>
+                        <h3>"Healthy soil, healthy planet."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -89,7 +89,7 @@ const HomePage = () => {
                         alt="Slide 6"
                     />
                     <Carousel.Caption>
-                        <h3>“Innovation in farming brings prosperity.”</h3>
+                        <h3>"Innovation in farming brings prosperity."</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -199,7 +199,7 @@ const HomePage = () => {
             <footer className="bg-dark text-light py-4 mt-5">
                 <Container>
                     <p className="mb-0 text-center">
-                        &copy; 2024 Smart Sprout. All Rights Reserved. | <a href="#" className="text-primary">Privacy Policy</a> | <a href="#" className="text-primary">Terms of Service</a>
+                        &copy; 2024 Smart Sprout. All Rights Reserved. | <a href="/privacy" className="text-primary">Privacy Policy</a> | <a href="/terms" className="text-primary">Terms of Service</a>
                     </p>
                 </Container>
             </footer>

@@ -7,22 +7,22 @@ const {
     updateOrderStatus,
     deleteOrder,
 } = require('../controllers/orderController');
-const { isAuthenticatedUser, authorizeRoles } = require('../middleware/authMiddleware');
+const { protect, admin } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
 // Create a new order
-router.post('/new', isAuthenticatedUser, createOrder);
+router.post('/new', protect, createOrder);
 
 // Get details of a specific order
-router.get('/:id', isAuthenticatedUser, getOrderDetails);
+router.get('/:id', protect, getOrderDetails);
 
 // Get all orders of the logged-in user
-router.get('/me', isAuthenticatedUser, getMyOrders);
+router.get('/me', protect, getMyOrders);
 
 // Admin routes
-router.get('/', isAuthenticatedUser, authorizeRoles('admin'), getAllOrders); // Get all orders (Admin)
-router.put('/:id', isAuthenticatedUser, authorizeRoles('admin'), updateOrderStatus); // Update order status (Admin)
-router.delete('/:id', isAuthenticatedUser, authorizeRoles('admin'), deleteOrder); // Delete order (Admin)
+router.get('/', protect, admin, getAllOrders); // Get all orders (Admin)
+router.put('/:id', protect, admin, updateOrderStatus); // Update order status (Admin)
+router.delete('/:id', protect, admin, deleteOrder); // Delete order (Admin)
 
 module.exports = router;

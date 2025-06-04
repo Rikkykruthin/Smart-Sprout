@@ -130,7 +130,7 @@ const ShopPage = () => {
 
             {/* Footer */}
             <footer>
-                <p>&copy; 2024 Smart Sprout. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2024 Smart Sprout. All Rights Reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
             </footer>
         </>
     );
